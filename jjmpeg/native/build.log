@@ -1,0 +1,745 @@
+for n in android-armv7-a-neon ; do \
+		( cd $n && /Library/Developer/CommandLineTools/usr/bin/make all ) ; \
+	done
+/usr/local/Cellar/android-ndk/r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc -c -o jjmpeg.o -I../jni -I../jni/linux -fPIC --sysroot=/usr/local/Cellar/android-ndk/r8e/platforms/android-8/arch-arm/ -mfloat-abi=softfp -mfpu=neon -marm -march=armv7-a -DANDROID=1 -I. -Wall -O2 -I/Users/rager/Work/FFmpeg/jjmpeg-android/jni/build/armeabi-v7-a-neon/include -I../jjmpeg ../jjmpeg/jjmpeg.c
+In file included from ./jjmpeg-jni.c:20,
+                 from ../jjmpeg/jjmpeg.c:24:
+../jjmpeg/jjmpeg-jni.h:79:32: error: libavcodec/avcodec.h: No such file or directory
+../jjmpeg/jjmpeg-jni.h:80:34: error: libavformat/avformat.h: No such file or directory
+../jjmpeg/jjmpeg-jni.h:81:30: error: libavutil/avutil.h: No such file or directory
+../jjmpeg/jjmpeg-jni.h:86:32: error: libswscale/swscale.h: No such file or directory
+In file included from ../jjmpeg/jjmpeg.c:24:
+./jjmpeg-jni.c:22: error: expected ')' before '*' token
+./jjmpeg-jni.c:23: error: expected ')' before '*' token
+./jjmpeg-jni.c:24: error: expected ')' before '*' token
+./jjmpeg-jni.c:25: error: expected ')' before '*' token
+./jjmpeg-jni.c:26: error: expected ')' before '*' token
+./jjmpeg-jni.c:27: error: expected ')' before '*' token
+./jjmpeg-jni.c:28: error: expected ')' before '*' token
+./jjmpeg-jni.c:29: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+./jjmpeg-jni.c:31: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+./jjmpeg-jni.c:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+./jjmpeg-jni.c:33: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+./jjmpeg-jni.c:34: error: expected ')' before '*' token
+./jjmpeg-jni.c:35: error: expected ')' before '*' token
+./jjmpeg-jni.c:36: error: expected ')' before '*' token
+./jjmpeg-jni.c:37: error: expected ')' before '*' token
+./jjmpeg-jni.c:38: error: expected ')' before '*' token
+./jjmpeg-jni.c:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+./jjmpeg-jni.c:40: error: expected ')' before '*' token
+./jjmpeg-jni.c:41: error: expected ')' before '*' token
+./jjmpeg-jni.c:42: error: expected ')' before '*' token
+./jjmpeg-jni.c:43: error: expected ')' before '*' token
+./jjmpeg-jni.c:44: error: expected ')' before '*' token
+./jjmpeg-jni.c:46: error: expected ')' before '*' token
+In file included from ../jjmpeg/jjmpeg.c:24:
+./jjmpeg-jni.c:47: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+./jjmpeg-jni.c:48: error: expected ')' before '*' token
+./jjmpeg-jni.c:49: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+./jjmpeg-jni.c:50: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+./jjmpeg-jni.c:51: error: expected ')' before '*' token
+./jjmpeg-jni.c:52: error: expected ')' before '*' token
+./jjmpeg-jni.c:53: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+./jjmpeg-jni.c:54: error: expected ')' before '*' token
+./jjmpeg-jni.c:55: error: expected ')' before '*' token
+./jjmpeg-jni.c:56: error: expected ')' before '*' token
+./jjmpeg-jni.c:57: error: expected ')' before '*' token
+./jjmpeg-jni.c:58: error: expected declaration specifiers or '...' before 'SwsFilter'
+./jjmpeg-jni.c:58: error: expected declaration specifiers or '...' before 'SwsFilter'
+./jjmpeg-jni.c:58: warning: 'enum PixelFormat' declared inside parameter list
+./jjmpeg-jni.c:58: warning: its scope is only this definition or declaration, which is probably not what you want
+./jjmpeg-jni.c:60: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+In file included from ../jjmpeg/jjmpeg.c:24:
+./jjmpeg-jni.c:61: error: expected ')' before '*' token
+./jjmpeg-jni.c:62: error: expected ')' before '*' token
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVNative_initNative':
+./jjmpeg-jni.c:73: error: 'davcodec_open' undeclared (first use in this function)
+./jjmpeg-jni.c:73: error: (Each undeclared identifier is reported only once
+./jjmpeg-jni.c:73: error: for each function it appears in.)
+./jjmpeg-jni.c:74: error: 'davcodec_close' undeclared (first use in this function)
+./jjmpeg-jni.c:75: error: 'davcodec_decode_video2' undeclared (first use in this function)
+./jjmpeg-jni.c:76: error: 'davcodec_encode_video' undeclared (first use in this function)
+./jjmpeg-jni.c:77: error: 'davcodec_decode_audio3' undeclared (first use in this function)
+./jjmpeg-jni.c:78: error: 'davcodec_encode_audio' undeclared (first use in this function)
+./jjmpeg-jni.c:79: error: 'davcodec_flush_buffers' undeclared (first use in this function)
+./jjmpeg-jni.c:80: error: 'davcodec_alloc_context' undeclared (first use in this function)
+./jjmpeg-jni.c:82: error: 'davcodec_find_encoder' undeclared (first use in this function)
+./jjmpeg-jni.c:83: error: 'davcodec_find_decoder' undeclared (first use in this function)
+./jjmpeg-jni.c:84: error: 'davcodec_find_encoder_by_name' undeclared (first use in this function)
+./jjmpeg-jni.c:85: error: 'dav_close_input_file' undeclared (first use in this function)
+./jjmpeg-jni.c:86: error: 'dav_close_input_stream' undeclared (first use in this function)
+./jjmpeg-jni.c:87: error: 'dav_seek_frame' undeclared (first use in this function)
+./jjmpeg-jni.c:88: error: 'dav_read_frame' undeclared (first use in this function)
+./jjmpeg-jni.c:89: error: 'dav_find_stream_info' undeclared (first use in this function)
+./jjmpeg-jni.c:90: error: 'dav_new_stream' undeclared (first use in this function)
+./jjmpeg-jni.c:91: error: 'dav_set_parameters' undeclared (first use in this function)
+./jjmpeg-jni.c:92: error: 'dav_write_header' undeclared (first use in this function)
+./jjmpeg-jni.c:93: error: 'dav_write_frame' undeclared (first use in this function)
+./jjmpeg-jni.c:94: error: 'dav_interleaved_write_frame' undeclared (first use in this function)
+./jjmpeg-jni.c:95: error: 'dav_write_trailer' undeclared (first use in this function)
+./jjmpeg-jni.c:97: error: 'davformat_seek_file' undeclared (first use in this function)
+./jjmpeg-jni.c:98: error: 'davformat_alloc_context' undeclared (first use in this function)
+./jjmpeg-jni.c:99: error: 'davformat_free_context' undeclared (first use in this function)
+./jjmpeg-jni.c:100: error: 'dav_find_input_format' undeclared (first use in this function)
+./jjmpeg-jni.c:101: error: 'dav_guess_format' undeclared (first use in this function)
+./jjmpeg-jni.c:102: error: 'dav_free_packet' undeclared (first use in this function)
+./jjmpeg-jni.c:103: error: 'dav_init_packet' undeclared (first use in this function)
+./jjmpeg-jni.c:104: error: 'davcodec_alloc_frame' undeclared (first use in this function)
+./jjmpeg-jni.c:105: error: 'davpicture_alloc' undeclared (first use in this function)
+./jjmpeg-jni.c:106: error: 'davpicture_free' undeclared (first use in this function)
+./jjmpeg-jni.c:107: error: 'dav_picture_copy' undeclared (first use in this function)
+./jjmpeg-jni.c:108: error: 'davio_close' undeclared (first use in this function)
+./jjmpeg-jni.c:111: error: 'dav_audio_resample_init' undeclared (first use in this function)
+./jjmpeg-jni.c:112: error: 'daudio_resample' undeclared (first use in this function)
+./jjmpeg-jni.c:113: error: 'daudio_resample_close' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getBitRate':
+./jjmpeg-jni.c:121: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:121: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setBitRate':
+./jjmpeg-jni.c:126: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:126: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getFlags':
+./jjmpeg-jni.c:131: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:131: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setFlags':
+./jjmpeg-jni.c:136: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:136: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getWidth':
+./jjmpeg-jni.c:141: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:141: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setWidth':
+./jjmpeg-jni.c:146: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:146: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getHeight':
+./jjmpeg-jni.c:151: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:151: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setHeight':
+./jjmpeg-jni.c:156: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:156: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getPixFmt':
+./jjmpeg-jni.c:161: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:161: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setPixFmt':
+./jjmpeg-jni.c:166: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:166: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getSampleRate':
+./jjmpeg-jni.c:171: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:171: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setSampleRate':
+./jjmpeg-jni.c:176: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:176: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getChannels':
+./jjmpeg-jni.c:181: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:181: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setChannels':
+./jjmpeg-jni.c:186: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:186: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getChannelLayout':
+./jjmpeg-jni.c:191: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:191: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setChannelLayout':
+./jjmpeg-jni.c:196: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:196: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getSampleFmt':
+./jjmpeg-jni.c:201: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:201: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setSampleFmt':
+./jjmpeg-jni.c:206: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:206: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getFrameSize':
+./jjmpeg-jni.c:211: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:211: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setFrameSize':
+./jjmpeg-jni.c:216: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:216: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getFrameNumber':
+./jjmpeg-jni.c:221: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:221: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getCodecType':
+./jjmpeg-jni.c:226: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:226: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setCodecType':
+./jjmpeg-jni.c:231: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:231: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getCodecID':
+./jjmpeg-jni.c:236: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:236: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setCodecID':
+./jjmpeg-jni.c:241: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:241: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getGOPSize':
+./jjmpeg-jni.c:246: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:246: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setGOPSize':
+./jjmpeg-jni.c:251: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:251: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getMaxBFrames':
+./jjmpeg-jni.c:256: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:256: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setMaxBFrames':
+./jjmpeg-jni.c:261: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:261: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getTimeBase':
+./jjmpeg-jni.c:266: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:266: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:269: error: 'AVRational' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getTimeBaseNum':
+./jjmpeg-jni.c:273: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:273: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setTimeBaseNum':
+./jjmpeg-jni.c:278: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:278: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getTimeBaseDen':
+./jjmpeg-jni.c:283: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:283: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setTimeBaseDen':
+./jjmpeg-jni.c:288: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:288: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getStrictStdCompliance':
+./jjmpeg-jni.c:293: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:293: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setStrictStdCompliance':
+./jjmpeg-jni.c:298: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:298: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getErrorRecognition':
+./jjmpeg-jni.c:303: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:303: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setErrorRecognition':
+./jjmpeg-jni.c:308: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:308: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getIdctAlgo':
+./jjmpeg-jni.c:313: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:313: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setIdctAlgo':
+./jjmpeg-jni.c:318: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:318: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getErrorConcealment':
+./jjmpeg-jni.c:323: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:323: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setErrorConcealment':
+./jjmpeg-jni.c:328: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:328: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getGlobalQuality':
+./jjmpeg-jni.c:333: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:333: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setGlobalQuality':
+./jjmpeg-jni.c:338: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:338: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getMbDecision':
+./jjmpeg-jni.c:343: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:343: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_setMbDecision':
+./jjmpeg-jni.c:348: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:348: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_getCodedFrame':
+./jjmpeg-jni.c:353: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:353: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:356: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_open':
+./jjmpeg-jni.c:361: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:361: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:362: error: 'AVCodec' undeclared (first use in this function)
+./jjmpeg-jni.c:362: error: 'codec' undeclared (first use in this function)
+./jjmpeg-jni.c:364: error: 'davcodec_open' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_close':
+./jjmpeg-jni.c:370: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:370: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:372: error: 'davcodec_close' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_decode_1video2':
+./jjmpeg-jni.c:378: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:378: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:379: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:379: error: 'picture' undeclared (first use in this function)
+./jjmpeg-jni.c:381: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:381: error: 'avpkt' undeclared (first use in this function)
+./jjmpeg-jni.c:383: error: 'davcodec_decode_video2' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_encode_1video':
+./jjmpeg-jni.c:389: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:389: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:391: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:391: error: 'pict' undeclared (first use in this function)
+./jjmpeg-jni.c:393: error: 'davcodec_encode_video' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_decode_1audio3':
+./jjmpeg-jni.c:399: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:399: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:402: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:402: error: 'avpkt' undeclared (first use in this function)
+./jjmpeg-jni.c:404: error: 'davcodec_decode_audio3' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_encode_1audio':
+./jjmpeg-jni.c:410: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:410: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:414: error: 'davcodec_encode_audio' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_flush_1buffers':
+./jjmpeg-jni.c:420: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c:420: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:422: error: 'davcodec_flush_buffers' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecContextNativeAbstract_alloc_1context':
+./jjmpeg-jni.c:428: error: 'davcodec_alloc_context' undeclared (first use in this function)
+./jjmpeg-jni.c:428: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecNativeAbstract_getName':
+./jjmpeg-jni.c:443: error: 'AVCodec' undeclared (first use in this function)
+./jjmpeg-jni.c:443: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecNativeAbstract_find_1encoder':
+./jjmpeg-jni.c:452: error: 'davcodec_find_encoder' undeclared (first use in this function)
+./jjmpeg-jni.c:452: error: 'AVCodec' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecNativeAbstract_find_1decoder':
+./jjmpeg-jni.c:459: error: 'davcodec_find_decoder' undeclared (first use in this function)
+./jjmpeg-jni.c:459: error: 'AVCodec' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVCodecNativeAbstract_find_1encoder_1by_1name':
+./jjmpeg-jni.c:467: error: 'davcodec_find_encoder_by_name' undeclared (first use in this function)
+./jjmpeg-jni.c:467: error: 'AVCodec' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getInputFormat':
+./jjmpeg-jni.c:477: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:477: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:480: error: 'AVInputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_setInputFormat':
+./jjmpeg-jni.c:484: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:484: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getOutputFormat':
+./jjmpeg-jni.c:489: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:489: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:492: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_setOutputFormat':
+./jjmpeg-jni.c:496: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:496: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getIOContext':
+./jjmpeg-jni.c:501: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:501: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:504: error: 'AVIOContext' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_setIOContext':
+./jjmpeg-jni.c:508: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:508: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getNBStreams':
+./jjmpeg-jni.c:513: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:513: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getStreamAt':
+./jjmpeg-jni.c:518: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:518: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:521: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getStartTime':
+./jjmpeg-jni.c:525: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:525: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getDuration':
+./jjmpeg-jni.c:530: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:530: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getFileSize':
+./jjmpeg-jni.c:535: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:535: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getBitRate':
+./jjmpeg-jni.c:540: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:540: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getFlags':
+./jjmpeg-jni.c:545: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:545: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_setFlags':
+./jjmpeg-jni.c:550: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:550: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getProbesize':
+./jjmpeg-jni.c:555: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:555: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_setProbesize':
+./jjmpeg-jni.c:560: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:560: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_getMaxAnalyzeDuration':
+./jjmpeg-jni.c:565: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:565: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_setMaxAnalyzeDuration':
+./jjmpeg-jni.c:570: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:570: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_close_1input_1file':
+./jjmpeg-jni.c:576: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:576: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:578: error: 'dav_close_input_file' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_close_1input_1stream':
+./jjmpeg-jni.c:583: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:583: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:585: error: 'dav_close_input_stream' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_seek_1frame':
+./jjmpeg-jni.c:590: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:590: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:592: error: 'dav_seek_frame' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_read_1frame':
+./jjmpeg-jni.c:598: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:598: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:599: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:599: error: 'pkt' undeclared (first use in this function)
+./jjmpeg-jni.c:601: error: 'dav_read_frame' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_find_1stream_1info':
+./jjmpeg-jni.c:607: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:607: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:609: error: 'dav_find_stream_info' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_new_1stream':
+./jjmpeg-jni.c:615: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:615: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:617: error: 'dav_new_stream' undeclared (first use in this function)
+./jjmpeg-jni.c:617: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_set_1parameters':
+./jjmpeg-jni.c:623: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:623: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:624: error: 'AVFormatParameters' undeclared (first use in this function)
+./jjmpeg-jni.c:624: error: 'ap' undeclared (first use in this function)
+./jjmpeg-jni.c:626: error: 'dav_set_parameters' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_write_1header':
+./jjmpeg-jni.c:632: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:632: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:634: error: 'dav_write_header' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_write_1frame':
+./jjmpeg-jni.c:640: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:640: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:641: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:641: error: 'pkt' undeclared (first use in this function)
+./jjmpeg-jni.c:643: error: 'dav_write_frame' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_interleaved_1write_1frame':
+./jjmpeg-jni.c:649: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:649: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:650: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:650: error: 'pkt' undeclared (first use in this function)
+./jjmpeg-jni.c:652: error: 'dav_interleaved_write_frame' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_write_1trailer':
+./jjmpeg-jni.c:658: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:658: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:660: error: 'dav_write_trailer' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_seek_1file':
+./jjmpeg-jni.c:672: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:672: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:674: error: 'davformat_seek_file' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_alloc_1context':
+./jjmpeg-jni.c:681: error: 'davformat_alloc_context' undeclared (first use in this function)
+./jjmpeg-jni.c:681: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNativeAbstract_free_1context':
+./jjmpeg-jni.c:687: error: 'AVFormatContext' undeclared (first use in this function)
+./jjmpeg-jni.c:687: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:689: error: 'davformat_free_context' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVInputFormatNativeAbstract_getName':
+./jjmpeg-jni.c:697: error: 'AVInputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:697: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVInputFormatNativeAbstract_getLongName':
+./jjmpeg-jni.c:704: error: 'AVInputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:704: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVInputFormatNativeAbstract_find_1input_1format':
+./jjmpeg-jni.c:714: error: 'dav_find_input_format' undeclared (first use in this function)
+./jjmpeg-jni.c:714: error: 'AVInputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_getName':
+./jjmpeg-jni.c:724: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:724: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_getLongName':
+./jjmpeg-jni.c:731: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:731: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_getMimeType':
+./jjmpeg-jni.c:738: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:738: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_getExtensions':
+./jjmpeg-jni.c:745: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:745: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_getVideoCodec':
+./jjmpeg-jni.c:752: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:752: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_getAudioCodec':
+./jjmpeg-jni.c:757: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:757: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_getSubtitleCodec':
+./jjmpeg-jni.c:762: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:762: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_getFlags':
+./jjmpeg-jni.c:767: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:767: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_setFlags':
+./jjmpeg-jni.c:772: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c:772: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVOutputFormatNativeAbstract_guess_1format':
+./jjmpeg-jni.c:782: error: 'dav_guess_format' undeclared (first use in this function)
+./jjmpeg-jni.c:782: error: 'AVOutputFormat' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatParametersNativeAbstract_getChannel':
+./jjmpeg-jni.c:794: error: 'AVFormatParameters' undeclared (first use in this function)
+./jjmpeg-jni.c:794: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFormatParametersNativeAbstract_setChannel':
+./jjmpeg-jni.c:799: error: 'AVFormatParameters' undeclared (first use in this function)
+./jjmpeg-jni.c:799: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_getPTS':
+./jjmpeg-jni.c:808: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:808: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_setPTS':
+./jjmpeg-jni.c:813: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:813: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_getDTS':
+./jjmpeg-jni.c:818: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:818: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_setDTS':
+./jjmpeg-jni.c:823: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:823: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_getSize':
+./jjmpeg-jni.c:828: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:828: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_getStreamIndex':
+./jjmpeg-jni.c:833: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:833: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_setStreamIndex':
+./jjmpeg-jni.c:838: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:838: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_getPos':
+./jjmpeg-jni.c:843: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:843: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_getFlags':
+./jjmpeg-jni.c:848: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:848: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_setFlags':
+./jjmpeg-jni.c:853: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:853: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_free_1packet':
+./jjmpeg-jni.c:859: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:859: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:861: error: 'dav_free_packet' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVPacketNativeAbstract_init_1packet':
+./jjmpeg-jni.c:866: error: 'AVPacket' undeclared (first use in this function)
+./jjmpeg-jni.c:866: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:868: error: 'dav_init_packet' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_getLineSizeAt':
+./jjmpeg-jni.c:876: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:876: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_getKeyFrame':
+./jjmpeg-jni.c:881: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:881: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_getPTS':
+./jjmpeg-jni.c:886: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:886: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_setPTS':
+./jjmpeg-jni.c:891: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:891: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_getDisplayPictureNumber':
+./jjmpeg-jni.c:896: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:896: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_getCodedPictureNumber':
+./jjmpeg-jni.c:901: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:901: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_alloc_1frame':
+./jjmpeg-jni.c:908: error: 'davcodec_alloc_frame' undeclared (first use in this function)
+./jjmpeg-jni.c:908: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_alloc':
+./jjmpeg-jni.c:914: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:914: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:916: error: 'davpicture_alloc' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_free':
+./jjmpeg-jni.c:922: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:922: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:924: error: 'davpicture_free' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVFrameNativeAbstract_copy':
+./jjmpeg-jni.c:929: error: 'AVFrame' undeclared (first use in this function)
+./jjmpeg-jni.c:929: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:930: error: 'src' undeclared (first use in this function)
+./jjmpeg-jni.c:932: error: 'dav_picture_copy' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getIndex':
+./jjmpeg-jni.c:940: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:940: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getCodec':
+./jjmpeg-jni.c:945: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:945: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:948: error: 'AVCodecContext' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getNBFrames':
+./jjmpeg-jni.c:952: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:952: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getQuality':
+./jjmpeg-jni.c:957: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:957: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_setQuality':
+./jjmpeg-jni.c:962: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:962: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getStartTime':
+./jjmpeg-jni.c:967: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:967: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_setStartTime':
+./jjmpeg-jni.c:972: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:972: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getDuration':
+./jjmpeg-jni.c:977: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:977: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_setDuration':
+./jjmpeg-jni.c:982: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:982: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getRFrameRate':
+./jjmpeg-jni.c:987: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:987: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:990: error: 'AVRational' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getTimeBase':
+./jjmpeg-jni.c:994: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:994: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:997: error: 'AVRational' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getSampleAspectRatio':
+./jjmpeg-jni.c:1001: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:1001: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:1004: error: 'AVRational' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getSampleAspectRatioNum':
+./jjmpeg-jni.c:1008: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:1008: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_setSampleAspectRatioNum':
+./jjmpeg-jni.c:1013: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:1013: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_getSampleAspectRatioDen':
+./jjmpeg-jni.c:1018: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:1018: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVStreamNativeAbstract_setSampleAspectRatioDen':
+./jjmpeg-jni.c:1023: error: 'AVStream' undeclared (first use in this function)
+./jjmpeg-jni.c:1023: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVRationalNativeAbstract_getNum':
+./jjmpeg-jni.c:1032: error: 'AVRational' undeclared (first use in this function)
+./jjmpeg-jni.c:1032: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVRationalNativeAbstract_setNum':
+./jjmpeg-jni.c:1037: error: 'AVRational' undeclared (first use in this function)
+./jjmpeg-jni.c:1037: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVRationalNativeAbstract_getDen':
+./jjmpeg-jni.c:1042: error: 'AVRational' undeclared (first use in this function)
+./jjmpeg-jni.c:1042: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVRationalNativeAbstract_setDen':
+./jjmpeg-jni.c:1047: error: 'AVRational' undeclared (first use in this function)
+./jjmpeg-jni.c:1047: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_AVIOContextNativeAbstract_close':
+./jjmpeg-jni.c:1057: error: 'AVIOContext' undeclared (first use in this function)
+./jjmpeg-jni.c:1057: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:1059: error: 'davio_close' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_SwsContextNativeAbstract_getContext':
+./jjmpeg-jni.c:1069: error: 'SwsFilter' undeclared (first use in this function)
+./jjmpeg-jni.c:1069: error: 'srcFilter' undeclared (first use in this function)
+./jjmpeg-jni.c:1070: error: 'dstFilter' undeclared (first use in this function)
+./jjmpeg-jni.c:1073: error: type of formal parameter 3 is incomplete
+./jjmpeg-jni.c:1073: error: type of formal parameter 6 is incomplete
+./jjmpeg-jni.c:1073: error: too many arguments to function 'dsws_getContext'
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_ReSampleContextNativeAbstract_resample_1init':
+./jjmpeg-jni.c:1095: error: 'dav_audio_resample_init' undeclared (first use in this function)
+./jjmpeg-jni.c:1095: error: 'ReSampleContext' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_ReSampleContextNativeAbstract_resample':
+./jjmpeg-jni.c:1101: error: 'ReSampleContext' undeclared (first use in this function)
+./jjmpeg-jni.c:1101: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:1105: error: 'daudio_resample' undeclared (first use in this function)
+./jjmpeg-jni.c: In function 'Java_au_notzed_jjmpeg_ReSampleContextNativeAbstract_resample_1close':
+./jjmpeg-jni.c:1111: error: 'ReSampleContext' undeclared (first use in this function)
+./jjmpeg-jni.c:1111: error: 'cptr' undeclared (first use in this function)
+./jjmpeg-jni.c:1113: error: 'daudio_resample_close' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: At top level:
+../jjmpeg/jjmpeg.c:29: error: expected ')' before '*' token
+../jjmpeg/jjmpeg.c:34: error: expected ')' before '*' token
+../jjmpeg/jjmpeg.c:39: error: expected ')' before '*' token
+../jjmpeg/jjmpeg.c:40: error: expected ')' before '*' token
+../jjmpeg/jjmpeg.c:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+../jjmpeg/jjmpeg.c:51: error: expected ')' before '*' token
+../jjmpeg/jjmpeg.c:58: error: expected ')' before '*' token
+../jjmpeg/jjmpeg.c:61: error: expected declaration specifiers or '...' before 'AVRational'
+../jjmpeg/jjmpeg.c:61: error: expected declaration specifiers or '...' before 'AVRational'
+../jjmpeg/jjmpeg.c:64: error: expected ')' before '*' token
+../jjmpeg/jjmpeg.c:66: warning: 'enum AVLockOp' declared inside parameter list
+../jjmpeg/jjmpeg.c:110: warning: 'enum AVLockOp' declared inside parameter list
+../jjmpeg/jjmpeg.c:110: error: parameter 2 ('op') has incomplete type
+../jjmpeg/jjmpeg.c: In function 'lock_cb':
+../jjmpeg/jjmpeg.c:114: error: 'AV_LOCK_CREATE' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:121: error: 'AV_LOCK_OBTAIN' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:123: error: 'AV_LOCK_RELEASE' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:125: error: 'AV_LOCK_DESTROY' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'init_local':
+../jjmpeg/jjmpeg.c:141: error: 'dav_open_input_file' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:142: error: 'dav_open_input_stream' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:143: error: 'davio_alloc_context' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:144: error: 'davio_open' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:145: error: 'dav_probe_input_buffer' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:146: error: 'davcodec_encode_video' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:147: error: 'dav_init_packet' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:149: error: 'davpicture_fill' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVNative_getVersions':
+../jjmpeg/jjmpeg.c:212: error: 'LIBAVFORMAT_VERSION_MAJOR' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:213: error: 'LIBAVCODEC_VERSION_MAJOR' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:214: error: 'LIBAVUTIL_VERSION_MAJOR' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNative_openInputFile':
+../jjmpeg/jjmpeg.c:225: error: 'AVFormatContext' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:225: error: 'context' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:227: error: 'AVInputFormat' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:227: error: 'fmt' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:228: error: 'AVFormatParameters' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:228: error: 'ap' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:231: error: 'dav_open_input_file' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVFormatContextNative_openInputStream':
+../jjmpeg/jjmpeg.c:244: error: 'AVIOContext' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:244: error: 'pb' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:246: error: 'AVFormatContext' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:246: error: 'context' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:248: error: 'AVInputFormat' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:248: error: 'fmt' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:249: error: 'AVFormatParameters' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:249: error: 'ap' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:253: error: 'dav_open_input_stream' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVFrameNative_getPlaneAt':
+../jjmpeg/jjmpeg.c:271: error: 'AVFrame' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:271: error: 'cptr' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVPacketNative_allocatePacket':
+../jjmpeg/jjmpeg.c:287: error: 'AVPacket' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:287: error: 'packet' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:292: error: 'dav_init_packet' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVPacketNative_freePacket':
+../jjmpeg/jjmpeg.c:302: error: 'AVPacket' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:302: error: 'packet' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVPacketNative_consume':
+../jjmpeg/jjmpeg.c:309: error: 'AVPacket' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:309: error: 'packet' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVPacketNative_setData':
+../jjmpeg/jjmpeg.c:323: error: 'AVPacket' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:323: error: 'packet' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_SwsContextNative_scale':
+../jjmpeg/jjmpeg.c:339: error: dereferencing pointer to incomplete type
+../jjmpeg/jjmpeg.c:339: error: dereferencing pointer to incomplete type
+../jjmpeg/jjmpeg.c:341: error: dereferencing pointer to incomplete type
+../jjmpeg/jjmpeg.c:341: error: dereferencing pointer to incomplete type
+../jjmpeg/jjmpeg.c: At top level:
+../jjmpeg/jjmpeg.c:346: error: expected declaration specifiers or '...' before 'AVFrame'
+../jjmpeg/jjmpeg.c: In function 'scaleArray':
+../jjmpeg/jjmpeg.c:347: error: storage size of 'dst' isn't known
+../jjmpeg/jjmpeg.c:351: error: 'davpicture_fill' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:368: error: 'src' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:347: warning: unused variable 'dst'
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_SwsContextNative_scaleIntArray':
+../jjmpeg/jjmpeg.c:382: warning: passing argument 3 of 'scaleArray' makes integer from pointer without a cast
+../jjmpeg/jjmpeg.c:346: note: expected 'jint' but argument is of type 'struct AVFrame *'
+../jjmpeg/jjmpeg.c:382: warning: passing argument 5 of 'scaleArray' makes pointer from integer without a cast
+../jjmpeg/jjmpeg.c:346: note: expected 'jarray' but argument is of type 'jint'
+../jjmpeg/jjmpeg.c:382: warning: passing argument 6 of 'scaleArray' makes integer from pointer without a cast
+../jjmpeg/jjmpeg.c:346: note: expected 'int' but argument is of type 'jintArray'
+../jjmpeg/jjmpeg.c:382: error: too many arguments to function 'scaleArray'
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_SwsContextNative_scaleByteArray':
+../jjmpeg/jjmpeg.c:407: warning: passing argument 3 of 'scaleArray' makes integer from pointer without a cast
+../jjmpeg/jjmpeg.c:346: note: expected 'jint' but argument is of type 'struct AVFrame *'
+../jjmpeg/jjmpeg.c:407: warning: passing argument 5 of 'scaleArray' makes pointer from integer without a cast
+../jjmpeg/jjmpeg.c:346: note: expected 'jarray' but argument is of type 'jint'
+../jjmpeg/jjmpeg.c:407: warning: passing argument 6 of 'scaleArray' makes integer from pointer without a cast
+../jjmpeg/jjmpeg.c:346: note: expected 'int' but argument is of type 'jintArray'
+../jjmpeg/jjmpeg.c:407: error: too many arguments to function 'scaleArray'
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVRationalNative_jjRescaleQ':
+../jjmpeg/jjmpeg.c:415: error: 'AVRational' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:415: error: 'bqp' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:416: error: 'cqp' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:419: error: too many arguments to function 'dav_rescale_q'
+../jjmpeg/jjmpeg.c: In function 'AVIOContext_readPacket':
+../jjmpeg/jjmpeg.c:452: warning: passing argument 2 of '(*vm)->AttachCurrentThread' from incompatible pointer type
+../jjmpeg/jjmpeg.c:452: note: expected 'void **' but argument is of type 'const struct JNINativeInterface_ ***'
+../jjmpeg/jjmpeg.c: In function 'AVIOContext_writePacket':
+../jjmpeg/jjmpeg.c:472: warning: passing argument 2 of '(*vm)->AttachCurrentThread' from incompatible pointer type
+../jjmpeg/jjmpeg.c:472: note: expected 'void **' but argument is of type 'const struct JNINativeInterface_ ***'
+../jjmpeg/jjmpeg.c: In function 'AVIOContext_seek':
+../jjmpeg/jjmpeg.c:490: warning: passing argument 2 of '(*vm)->AttachCurrentThread' from incompatible pointer type
+../jjmpeg/jjmpeg.c:490: note: expected 'void **' but argument is of type 'const struct JNINativeInterface_ ***'
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVIOContextNative_allocContext':
+../jjmpeg/jjmpeg.c:516: error: 'AVIOContext' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:516: error: 'res' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:516: error: 'davio_alloc_context' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVIOContextNative_probeInput':
+../jjmpeg/jjmpeg.c:532: error: 'AVIOContext' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:532: error: 'pb' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:535: error: 'AVInputFormat' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:535: error: 'fmt' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:539: error: 'dav_probe_input_buffer' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVIOContextNative_bind':
+../jjmpeg/jjmpeg.c:553: error: 'AVIOContext' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:553: error: 'cptr' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVIOContextNative_unbind':
+../jjmpeg/jjmpeg.c:572: error: 'AVIOContext' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:572: error: 'cptr' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c: In function 'Java_au_notzed_jjmpeg_AVIOContextNative_open':
+../jjmpeg/jjmpeg.c:587: error: 'AVIOContext' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:587: error: 'context' undeclared (first use in this function)
+../jjmpeg/jjmpeg.c:591: error: 'davio_open' undeclared (first use in this function)
+make[1]: *** [jjmpeg.o] Error 1
+make: *** [all] Error 2

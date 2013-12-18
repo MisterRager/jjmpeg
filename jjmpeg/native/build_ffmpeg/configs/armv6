@@ -1,0 +1,4 @@
+CPU=armv6
+PREFIX=$(pwd)/android/$CPU 
+ADDI_CFLAGS="-march=armv6"
+ADDI_LDFLAGS=""

@@ -1,0 +1,3 @@
+CPU=arm
+PREFIX=$(pwd)/android/$CPU 
+ADDI_CFLAGS="-marm"

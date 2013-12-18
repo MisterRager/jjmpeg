@@ -1,0 +1,113 @@
+# for a non-linux target, probably just copy this and include that instead.
+
+# This makefile is included by the target makefiles
+# They must define:
+#   SRC (this directory)
+#   TARGET
+#   jjmpeg_lib (if not libjjmpeg.so)
+#   TARGET_CFLAGS
+#   JNI_TARGET_CFLAGS (the extra 'target' type for include/jni/<target>)
+# and define "all:"
+
+# this one then builds whatever was requested based on that.
+
+CC=$(CROSS)$(TARGET_CC)
+AR=$(CROSS)$(TARGET_AR)
+LD=$(CROSS)$(TARGET_LD)
+
+JNI_CFLAGS =-I$(SRC)/jni $(TARGET_JNI_CFLAGS)
+
+CFLAGS=$(JNI_CFLAGS) $(TARGET_CFLAGS) -I. -Wall -O2
+LIBS=$(TARGET_LIBS)
+LDFLAGS=$(TARGET_LDFLAGS)
+
+# the path to the sources ... not sure this is the best way to do it, but it
+# simplifies the following target specifications
+VPATH = $(SRC):$(SRC)/jjmpeg:$(SRC)/jjdvb
+
+all:
+
+webstart: $(jjmpeg_jar)
+
+# ###############################################################################
+# jjmpeg interface
+# ###############################################################################
+
+JJMPEG_CFLAGS=$(TARGET_JJMPEG_CFLAGS) -I$(SRC)/jjmpeg
+JJMPEG_LIBS=$(TARGET_JJMPEG_LIBS)
+JJMPEG_LDFLAGS=$(TARGET_JJMPEG_LDFLAGS)
+
+JJMPEG_CLASSES=au.notzed.jjmpeg.AVFormatContextNative	\
+ au.notzed.jjmpeg.AVCodecNative				\
+ au.notzed.jjmpeg.AVCodecContext			\
+ au.notzed.jjmpeg.AVFrameNative				\
+ au.notzed.jjmpeg.AVPacketNative			\
+ au.notzed.jjmpeg.AVStreamNative			\
+ au.notzed.jjmpeg.AVNative				\
+ au.notzed.jjmpeg.SwsContextNative			\
+ au.notzed.jjmpeg.AVFormatContextNativeAbstract		\
+ au.notzed.jjmpeg.AVDictionaryNative
+
+JJMPEG_HEADERS=$(patsubst %,%.h,$(subst .,_,$(JJMPEG_CLASSES)))
+
+$(jjmpeg_lib): jjmpeg.o
+	$(CC) $(LDFLAGS) -shared $(JJMPEG_LDFLAGS) -o $@ $^ $(LIBS) $(JJMPEG_LIBS)
+	$(SRC)/jjmpeg/getversions.pl $(FFMPEG_HOME)/*/*.h > README.FFmpeg-version
+
+jjmpeg.o: jjmpeg.c $(JJMPEG_HEADERS) jjmpeg-jni.c jjmpeg-jni.h
+	$(CC) -c -o $@ $(CFLAGS) $(JJMPEG_CFLAGS) $<
+
+jjmpeg-jni.c AVAbstract.java: native-jjmpeg.conf
+	$(SRC)/jjmpeg/genjjmpeg.pl $^ AVAbstract.java jjmpeg-jni.c
+
+$(JJMPEG_HEADERS): $(SRC)/../dist/jjmpeg.jar
+	$(javah) -classpath $< $(JJMPEG_CLASSES)
+
+$(jjmpeg_jar): $(jjmpeg_lib)
+	$(jar) cf $(jjmpeg_jar) $(jjmpeg_lib)
+	$(jarsigner) -keystore $(keystore) -storepass $(keypass) -keypass $(keypass) $(jjmpeg_jar) jjmpeg
+
+# ###############################################################################
+# jjdvb interface
+# ###############################################################################
+
+JJDVB_CFLAGS=$(TARGET_JJDVB_CFLAGS) -I$(SRC)/jjdvb
+JJDVB_LIBS=$(TARGET_JJDVB_LIBS)
+JJDVB_LDFLAGS=$(TARGET_JJDVB_LDFLAGS)
+
+JJDVB_CLASSES=au.notzed.jjdvb.DVBNative		\
+ au.notzed.jjdvb.DMX				\
+ au.notzed.jjdvb.FE				\
+ au.notzed.jjdvb.DVBFrontendParameters		\
+ au.notzed.jjdvb.DMXPESFilterParams
+
+JJDVB_HEADERS=$(patsubst %,%.h,$(subst .,_,$(JJDVB_CLASSES)))
+
+$(jjdvb_lib): jjdvb.o
+	$(CC) $(LDFLAGS) -shared $(JJDVB_LDFLAGS) -o $@ $^ $(LIBS) $(JJDVB_LIBS)
+
+jjdvb.o: jjdvb.c $(JJDVB_HEADERS) jjdvb-jni.c jjdvb-jni.h
+	$(CC) -c -o $@ $(CFLAGS) $(JJDVB_CFLAGS) $<
+
+jjdvb-jni.c DVBAbstract.java: native-jjdvb.conf
+	$(SRC)/jjdvb/gendvb.pl $^ DVBAbstract.java jjdvb-jni.c
+
+
+$(JJDVB_HEADERS): $(SRC)/../dist/jjdvb.jar
+	$(javah) -classpath $< $(JJDVB_CLASSES)
+
+# ###############################################################################
+
+clean::
+	-rm $(jjmpeg_jar)
+	-rm jjmpeg.o
+	-rm jjmpeg-jni.c
+	-rm AVAbstract.java
+	-rm jjdvb.o
+	-rm jjdvb-jni.c
+	-rm DVBAbstract.java
+	-rm au_notzed_*.h
+
+reallyclean: clean
+	-rm $(jjmpeg_lib)
+	-rm $(jjdvb_lib)

@@ -1,0 +1,9 @@
+.svn
+*.so
+*.a
+.idea
+*.iml
+classes
+jjmpeg/native/build_ffmpeg/ffmpeg/*
+jjmpeg/dist/*
+*.log

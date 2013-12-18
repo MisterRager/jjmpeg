@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp codebase="http://jjmpeg.googlecode.com/svn/webstart" href="jjmpeg.jnlp">
+    <information>
+        <title>Java(tm) Binding to the FFMPEG API</title>
+        <vendor>Michael Zucchi</vendor>
+        <homepage href="http://code.google.com/p/jjmpeg/"/>
+        <description>Java Binding to the FFMPEG API</description>
+        <description kind="short">Java programming language binding for the FFMPEG API</description>
+        <offline-allowed/>
+    </information>
+    <update check="background" policy="always"/>
+    <security>
+        <all-permissions/>
+    </security>
+    <resources>
+        <jar href="jjmpeg.jar" />
+    </resources>
+    <resources os="Windows" arch="x86">
+        <nativelib href = "jjmpeg-natives-windows-i586.jar" />
+    </resources>
+    <resources os="Windows" arch="amd64">
+        <nativelib href = "jjmpeg-natives-windows-amd64.jar" />
+    </resources>
+    <resources os="Windows" arch="x86_64">
+        <nativelib href = "jjmpeg-natives-windows-amd64.jar" />
+    </resources>
+    <resources os="SunOS" arch="sparc">
+        <nativelib href = "jjmpeg-natives-solaris-sparc.jar" />
+    </resources>
+    <resources os="SunOS" arch="sparcv9">
+        <nativelib href = "jjmpeg-natives-solaris-sparcv9.jar" />
+    </resources>
+    <resources os="SunOS" arch="x86">
+        <nativelib href = "jjmpeg-natives-solaris-i586.jar" />
+    </resources>
+    <resources os="SunOS" arch="amd64">
+        <nativelib href = "jjmpeg-natives-solaris-amd64.jar" />
+    </resources>
+    <resources os="SunOS" arch="x86_64">
+        <nativelib href = "jjmpeg-natives-solaris-amd64.jar" />
+    </resources>
+    <resources os="Linux" arch="i386">
+        <nativelib href = "jjmpeg-natives-linux-i586.jar" />
+    </resources>
+    <resources os="Linux" arch="x86">
+        <nativelib href = "jjmpeg-natives-linux-i586.jar" />
+    </resources>
+    <resources os="Linux" arch="amd64">
+        <nativelib href = "jjmpeg-natives-linux-amd64.jar" />
+    </resources>
+    <resources os="Linux" arch="x86_64">
+        <nativelib href = "jjmpeg-natives-linux-amd64.jar" />
+    </resources>
+    <resources os="Mac OS X" arch="i386">
+        <nativelib href = "jjmpeg-natives-macosx-universal.jar" />
+    </resources>
+    <resources os="Mac OS X" arch="x86_64">
+        <nativelib href = "jjmpeg-natives-macosx-universal.jar" />
+    </resources>
+    <component-desc />
+</jnlp>

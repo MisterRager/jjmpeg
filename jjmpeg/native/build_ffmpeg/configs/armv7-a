@@ -1,0 +1,4 @@
+CPU=armv7-a
+PREFIX=$(pwd)/android/$CPU 
+ADDI_CFLAGS="-march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp"
+ADDI_LDFLAGS="-Wl,--fix-cortex-a8"
